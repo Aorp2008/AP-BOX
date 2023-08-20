@@ -10,7 +10,8 @@ while true; do
     echo "3.部署在线文件目录----Zfile"
     echo "4.部署视频下载服务----AllTube"
     echo "5.部署反代理工具----NPM"
-    echo "6.FFmpeg循环推流脚本"
+    echo "6.部署无人直播----云SRS"
+    echo "7.FFmpeg循环推流脚本"
     echo ""
     echo "0.退出脚本"
     echo "=================================================="
@@ -44,12 +45,16 @@ while true; do
             break
             ;;
         "6")
+            wget -O yunsrs.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/yunsrs.sh && chmod +x yunsrs.sh && clear && ./yunsrs.sh
+            break
+            ;;
+        "7")
             wget -O FFmpeg.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/FFmpeg.sh && chmod +x FFmpeg.sh && clear && ./FFmpeg.sh
             break
             ;;
         *)
             echo "输入错误！"
-            sleep 2
+            sleep 1
             ;;
     esac
 done
