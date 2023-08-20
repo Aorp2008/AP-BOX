@@ -11,6 +11,8 @@ while true; do
     echo "3.部署在线文件目录----Zfile"
     echo "4.FFmpeg循环推流脚本"
     echo ""
+    echo "0.推出脚本"
+    echo ""
     echo "=================================================="
     echo ""
     echo ""
@@ -18,6 +20,9 @@ while true; do
 
     # 根据输入执行对应的脚本
     case $userInput in
+        "0")
+            break
+            ;;
         "1")
             wget -O docker.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/docker.sh && chmod +x docker.sh && clear && ./docker.sh
             break
