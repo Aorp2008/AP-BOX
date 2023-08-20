@@ -8,6 +8,10 @@ wget -O apbox.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/apbox.s
 ```
 wget -O docker.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/docker.sh && chmod +x docker.sh && clear && ./docker.sh
 ```
+#### 一键部署视频下载服务----AllTube
+```
+wget -O alltube.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/alltube.sh && chmod +x alltube.sh && clear && ./alltube.sh
+```
 #### 一键部署简单图床----Easyimage
 ```
 wget -O easyimg.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/easyimg.sh && chmod +x easyimg.sh && clear && ./easyimg.sh
