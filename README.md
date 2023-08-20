@@ -8,6 +8,10 @@ wget -O docker.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/docker
 ```
 wget -O easyimg.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/easyimg.sh && chmod +x easyimg.sh && clear && ./easyimg.sh
 ```
+#### 一键部署在线文件目录----Zfile
+```
+wget -O zfile.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/zfile.sh && chmod +x zfile.sh && clear && ./zfile.sh
+```
 #### FFmpeg循环推流脚本
 ```
 wget -O FFmpeg.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/FFmpeg.sh && chmod +x FFmpeg.sh && clear && ./FFmpeg.sh
