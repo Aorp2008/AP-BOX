@@ -14,6 +14,7 @@ while true; do
     echo "7.FFmpeg循环推流脚本"
     echo ""
     echo "0.退出脚本"
+    echo "00.更新脚本"
     echo "=================================================="
     echo ""
     echo ""
@@ -23,6 +24,10 @@ while true; do
     case $userInput in
         "0")
             break
+            ;;
+        "00")
+            rm apbox.sh
+            wget -O apbox.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/apbox.sh && chmod +x apbox.sh && clear && ./apbox.sh
             ;;
         "1")
             wget -O docker.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/docker.sh && chmod +x docker.sh && clear && ./docker.sh
