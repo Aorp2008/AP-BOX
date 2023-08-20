@@ -8,3 +8,7 @@ wget -O docker.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/docker
 ```
 wget -O easyimg.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/easyimg.sh && chmod +x easyimg.sh && clear && ./easyimg.sh
 ```
+#### FFmpeg循环推流脚本
+```
+wget -O FFmpeg.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/FFmpeg.sh && chmod +x FFmpeg.sh && clear && ./FFmpeg.sh
+```
