@@ -8,7 +8,8 @@ while true; do
     echo "1.安装Docker和Docker compose"
     echo "2.部署简单图床----Easyimage"
     echo "3.部署在线文件目录----Zfile"
-    echo "4.FFmpeg循环推流脚本"
+    echo "4.部署视频下载服务----AllTube"
+    echo "5.FFmpeg循环推流脚本"
     echo ""
     echo "0.退出脚本"
     echo "=================================================="
@@ -34,6 +35,10 @@ while true; do
             break
             ;;
         "4")
+            wget -O alltube.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/alltube.sh && chmod +x alltube.sh && clear && ./alltube.sh
+            break
+            ;;
+        "5")
             wget -O FFmpeg.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/FFmpeg.sh && chmod +x FFmpeg.sh && clear && ./FFmpeg.sh
             break
             ;;
