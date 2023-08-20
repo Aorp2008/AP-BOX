@@ -11,7 +11,7 @@ while true; do
     echo "3.部署在线文件目录----Zfile"
     echo "4.FFmpeg循环推流脚本"
     echo ""
-    echo "0.推出脚本"
+    echo "0.退出脚本"
     echo ""
     echo "=================================================="
     echo ""
