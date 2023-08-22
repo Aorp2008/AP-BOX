@@ -13,6 +13,15 @@ while true; do
     echo "6.部署无人直播----云SRS"
     echo "7.FFmpeg循环推流脚本"
     echo ""
+    echo "=================================================="
+    echo ""
+    echo "11.八合一一键脚本----v2ray-agent"
+    echo "12.支持多协议多用户的面板----Xui"
+    echo "13.V2Ray 一键安装脚本 & 管理脚本"
+    echo "14.Hysteria一键安装----Hi Hysteria"
+    echo "15.vmess+ws+tls 一键安装脚本----V2Ray_ws-tls_bash_onekey"
+    echo "16.Bash script for installing V2Ray----fhs-install-v2ray"
+    echo "=================================================="
     echo "0.退出脚本"
     echo "00.更新脚本"
     echo "=================================================="
@@ -55,6 +64,30 @@ while true; do
             ;;
         "7")
             wget -O FFmpeg.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/FFmpeg.sh && chmod +x FFmpeg.sh && clear && ./FFmpeg.sh
+            break
+            ;;
+        "11")
+            wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+            break
+            ;;
+        "12")
+            bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+            break
+            ;;
+        "13")
+            bash <(wget -qO- -o- https://git.io/v2ray.sh)
+            break
+            ;;
+        "14")
+            bash <(curl -fsSL https://git.io/hysteria.sh)
+            break
+            ;;
+        "15")
+            wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh
+            break
+            ;;
+        "16")
+            bash <(wget -qO- -o- https://git.io/v2ray.sh)
             break
             ;;
         *)
