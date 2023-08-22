@@ -2,7 +2,7 @@
 ###### Airp的一键脚本仓库
 #### Ap-Box----多功能工具箱
 ```
-wget -O apbox.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/apbox.sh && chmod +x apbox.sh && clear && ./apbox.sh && rm apbox.sh
+wget -O apbox.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/apbox.sh && chmod +x apbox.sh && clear && ./apbox.sh
 ```
 #### 一键安装docker和docker-compose
 ```
