@@ -58,12 +58,16 @@ while true; do
     echo "17.八合一一键脚本----v2ray-agent"
     echo "18.一键Warp脚本----warp"
     echo "19.功能强大的流媒体解锁检测----RegionRestrictionCheck"
-    echo "20.来自大佬的一键BBR管理脚本----BBR"
+    echo "20.功能强大的流媒体解锁检测(另一个)"
+    echo "21.来自大佬的一键BBR管理脚本----BBR"
+    echo "22.全面测试机器----superbench"
+    echo "23.多线路网速测试----speed"
+    echo "24.单线程三网测试----hyperspeed"
     echo ""
     echo "=================================================="
     echo ""
-    echo "21.非常好用的探针面板----哪吒探针"
-    echo "22.一个非常好用的下载工具----aria2"
+    echo "31.非常好用的探针面板----哪吒探针"
+    echo "32.一个非常好用的下载工具----aria2"
     echo ""
     echo "=================================================="
     echo "0.退出脚本"
@@ -154,14 +158,30 @@ while true; do
             break
             ;;
         "20")
-            bbr
+            bash <(curl -L -s check.unlock.media)
             break
             ;;
         "21")
-            nezha
+            bbr
             break
             ;;
         "22")
+            wget -qO- https://down.vpsaff.net/linux/speedtest/superbench.sh | sudo bash
+            break
+            ;;
+        "23")
+            bash <(wget -qO- https://raw.githubusercontent.com/chiron688/linux_jobs/main/speed.sh)
+            break
+            ;;
+        "24")
+            bash <(curl -so- https://raw.githubusercontent.com/linconbb/bim-core/main/hyperspeed.sh)
+            break
+            ;;
+        "31")
+            nezha
+            break
+            ;;
+        "32")
             aria
             break
             ;;
