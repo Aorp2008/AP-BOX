@@ -62,8 +62,8 @@ while true; do
     echo ""
     echo "=================================================="
     echo ""
-    echo "20.非常好用的探针面板----哪吒探针"
-    echo "21.一个非常好用的下载工具----aria2"
+    echo "21.非常好用的探针面板----哪吒探针"
+    echo "22.一个非常好用的下载工具----aria2"
     echo ""
     echo "=================================================="
     echo "0.退出脚本"
@@ -153,15 +153,15 @@ while true; do
             RegionRestrictionCheck
             break
             ;;
-        "19")
+        "20")
             bbr
             break
             ;;
-        "20")
+        "21")
             nezha
             break
             ;;
-        "21")
+        "22")
             aria
             break
             ;;
