@@ -4,8 +4,6 @@ function nezha(){
 wget -O "/root/nezha.sh" "https://raw.githubusercontent.com/BlueSkyXN/nezha/master/script/install.sh" --no-check-certificate -T 30 -t 5 -d
 chmod +x "/root/nezha.sh"
 chmod 777 "/root/nezha.sh"
-blue "你也可以输入 bash /root/nezha.sh 来手动运行"
-blue "下载完成"
 bash "/root/nezha.sh"
 }
 
@@ -13,8 +11,6 @@ function bbr(){
 wget -O "/root/tcp.sh" "https://raw.githubusercontent.com/BlueSkyXN/ChangeSource/master/tcp.sh" --no-check-certificate -T 30 -t 5 -d
 chmod +x "/root/tcp.sh"
 chmod 777 "/root/tcp.sh"
-blue "下载完成"
-blue "你也可以输入 bash /root/tcp.sh 来手动运行"
 bash "/root/tcp.sh"
 }
 
@@ -26,8 +22,6 @@ function aria(){
 wget -O "/root/aria2.sh" "https://raw.githubusercontent.com/P3TERX/aria2.sh/master/aria2.sh" --no-check-certificate -T 30 -t 5 -d
 chmod +x "/root/aria2.sh"
 chmod 777 "/root/aria2.sh"
-blue "你也可以输入 bash /root/aria2.sh 来手动运行"
-blue "下载完成"
 bash "/root/aria2.sh"
 }
 
@@ -36,7 +30,6 @@ while true; do
     echo "AP-BOX"
     echo "FROM: https://github.com/Aorp2008/Airp_sh"
     echo "=================================================="
-    echo ""
     echo "1.安装Docker和Docker compose"
     echo "2.部署简单图床----Easyimage"
     echo "3.部署在线文件目录----Zfile"
@@ -45,9 +38,7 @@ while true; do
     echo "6.部署无人直播----云SRS"
     echo "7.FFmpeg循环推流脚本"
     echo "8.一键安装网盘----Alist"
-    echo ""
     echo "=================================================="
-    echo ""
     echo "10.x-ui 魔改优化版----Xui_plus"
     echo "11.x-ui 魔改优化版----Xui(魔改另一个版本)"
     echo "12.支持多协议多用户的面板----Xui"
@@ -63,12 +54,9 @@ while true; do
     echo "22.全面测试机器----superbench"
     echo "23.多线路网速测试----speed"
     echo "24.单线程三网测试----hyperspeed"
-    echo ""
     echo "=================================================="
-    echo ""
     echo "31.非常好用的探针面板----哪吒探针"
     echo "32.一个非常好用的下载工具----aria2"
-    echo ""
     echo "=================================================="
     echo "0.退出脚本"
     echo "00.更新脚本"
@@ -114,10 +102,10 @@ while true; do
             wget -O FFmpeg.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/FFmpeg.sh && chmod +x FFmpeg.sh && clear && ./FFmpeg.sh
             break
             ;;
-        "7")
+        "8")
             curl -fsSL "https://alist.nn.ci/v3.sh" | bash -s install
             ;;
-        "11")
+        "10")
             bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
             break
             ;;
