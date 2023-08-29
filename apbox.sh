@@ -14,6 +14,13 @@ chmod 777 "/root/tcp.sh"
 bash "/root/tcp.sh"
 }
 
+function mtp(){
+wget -O "/root/mtp.sh" "https://raw.githubusercontent.com/sunpma/mtp/master/mtproxy.sh" --no-check-certificate -T 30 -t 5 -d
+chmod +x "/root/mtp.sh"
+chmod 777 "/root/mtp.sh"
+bash "/root/mtp.sh"
+}
+
 function RegionRestrictionCheck(){
 bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
 }
@@ -57,6 +64,7 @@ while true; do
     echo "=================================================="
     echo "31.非常好用的探针面板----哪吒探针"
     echo "32.一个非常好用的下载工具----aria2"
+    echo "33.一个Telegram官方代理----mtp"
     echo "=================================================="
     echo "0.退出脚本"
     echo "00.更新脚本"
@@ -171,6 +179,10 @@ while true; do
             ;;
         "32")
             aria
+            break
+            ;;
+        "33")
+            mtp
             break
             ;;
         *)
