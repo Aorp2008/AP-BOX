@@ -46,6 +46,7 @@ while true; do
     echo "7.FFmpeg循环推流脚本"
     echo "8.一键安装网盘----Alist"
     echo "9.一键安装面板----qinglong"
+    echo "10.一键安装论坛----flarum"
     echo "=================================================="
     echo "10.x-ui 魔改优化版----Xui_plus"
     echo "11.x-ui 魔改优化版----Xui(魔改另一个版本)"
@@ -115,14 +116,13 @@ while true; do
             curl -fsSL "https://alist.nn.ci/v3.sh" | bash -s install
             ;;
         "9")
-            wget -O npm.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/qinglong.sh && chmod +x qinglong.sh && clear && ./qinglong.sh
+            wget -O qinglong.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/qinglong.sh && chmod +x qinglong.sh && clear && ./qinglong.sh
             ;;
         "10")
-            bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
-            break
+            wget -O flarum.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/flarum.sh && chmod +x flarum.sh && clear && ./flarum.sh
             ;;
         "11")
-            bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+            bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
             break
             ;;
         "12")
@@ -130,50 +130,54 @@ while true; do
             break
             ;;
         "13")
-            bash <(wget -qO- -o- https://git.io/v2ray.sh)
+            bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
             break
             ;;
         "14")
-            bash <(curl -fsSL https://git.io/hysteria.sh)
-            break
-            ;;
-        "15")
-            wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh
-            break
-            ;;
-        "16")
             bash <(wget -qO- -o- https://git.io/v2ray.sh)
             break
             ;;
+        "15")
+            bash <(curl -fsSL https://git.io/hysteria.sh)
+            break
+            ;;
+        "16")
+            wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/wulabing/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh
+            break
+            ;;
         "17")
-            wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+            bash <(wget -qO- -o- https://git.io/v2ray.sh)
             break
             ;;
         "18")
-            wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
+            wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
             break
             ;;
         "19")
-            RegionRestrictionCheck
+            wget -N https://raw.githubusercontent.com/fscarmen/warp/main/menu.sh && bash menu.sh
             break
             ;;
         "20")
-            bash <(curl -L -s check.unlock.media)
+            RegionRestrictionCheck
             break
             ;;
         "21")
-            bbr
+            bash <(curl -L -s check.unlock.media)
             break
             ;;
         "22")
-            wget -qO- https://down.vpsaff.net/linux/speedtest/superbench.sh | sudo bash
+            bbr
             break
             ;;
         "23")
-            bash <(wget -qO- https://raw.githubusercontent.com/chiron688/linux_jobs/main/speed.sh)
+            wget -qO- https://down.vpsaff.net/linux/speedtest/superbench.sh | sudo bash
             break
             ;;
         "24")
+            bash <(wget -qO- https://raw.githubusercontent.com/chiron688/linux_jobs/main/speed.sh)
+            break
+            ;;
+        "25")
             bash <(curl -so- https://raw.githubusercontent.com/linconbb/bim-core/main/hyperspeed.sh)
             break
             ;;
