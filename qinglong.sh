@@ -1,5 +1,6 @@
 #!/bin/bash
 
+local_ip=$(hostname -I | awk '{print $1}')
 if ! command -v wget &> /dev/null; then
     echo "wget未安装，正在安装..."
     if command -v apt-get &> /dev/null; then
@@ -33,4 +34,6 @@ mkdir -p "$download_directory"
 cd "$download_directory" || exit
 wget "$file_url"
 docker-compose up -d
-cd - || exit
+cd /root
+echo "青龙面板安装完毕"
+echo "使用$local_ip:5700访问面板"
