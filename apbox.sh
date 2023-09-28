@@ -45,6 +45,7 @@ while true; do
     echo "6.部署无人直播----云SRS"
     echo "7.FFmpeg循环推流脚本"
     echo "8.一键安装网盘----Alist"
+    echo "9.一键安装面板----qinglong"
     echo "=================================================="
     echo "10.x-ui 魔改优化版----Xui_plus"
     echo "11.x-ui 魔改优化版----Xui(魔改另一个版本)"
@@ -112,6 +113,9 @@ while true; do
             ;;
         "8")
             curl -fsSL "https://alist.nn.ci/v3.sh" | bash -s install
+            ;;
+        "9")
+            wget -O npm.sh https://raw.githubusercontent.com/Aorp2008/Airp_sh/main/qinglong.sh && chmod +x qinglong.sh && clear && ./qinglong.sh
             ;;
         "10")
             bash <(curl -Ls https://raw.githubusercontent.com/FranzKafkaYu/x-ui/master/install.sh)
