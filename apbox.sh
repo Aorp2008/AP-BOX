@@ -20,7 +20,9 @@ chmod +x "/root/mtp.sh"
 chmod 777 "/root/mtp.sh"
 bash "/root/mtp.sh"
 }
-
+function gost(){
+wget --no-check-certificate -O gost.sh https://raw.githubusercontent.com/KANIKIG/Multi-EasyGost/master/gost.sh && chmod +x gost.sh && ./gost.sh
+}
 function RegionRestrictionCheck(){
 bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
 }
@@ -63,6 +65,7 @@ while true; do
     echo "23.全面测试机器----superbench"
     echo "24.多线路网速测试----speed"
     echo "25.单线程三网测试----hyperspeed"
+    echo "26.一键配置中转----Gost"
     echo "=================================================="
     echo "31.非常好用的探针面板----哪吒探针"
     echo "32.一个非常好用的下载工具----aria2"
@@ -179,6 +182,10 @@ while true; do
             ;;
         "25")
             bash <(curl -so- https://raw.githubusercontent.com/linconbb/bim-core/main/hyperspeed.sh)
+            break
+            ;;
+        "26")
+            gost
             break
             ;;
         "31")
