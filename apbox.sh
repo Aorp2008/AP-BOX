@@ -13,7 +13,9 @@ chmod +x "/root/tcp.sh"
 chmod 777 "/root/tcp.sh"
 bash "/root/tcp.sh"
 }
-
+function hy2(){
+wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/hysteria-install/main/hy2/hysteria.sh && bash hysteria.sh
+}
 function mtp(){
 wget -O "/root/mtp.sh" "https://raw.githubusercontent.com/sunpma/mtp/master/mtproxy.sh" --no-check-certificate -T 30 -t 5 -d
 chmod +x "/root/mtp.sh"
@@ -66,6 +68,7 @@ while true; do
     echo "24.多线路网速测试----speed"
     echo "25.单线程三网测试----hyperspeed"
     echo "26.一键配置中转----Gost"
+    echo "27.一键部署歇斯底里2----hy2"
     echo "=================================================="
     echo "31.非常好用的探针面板----哪吒探针"
     echo "32.一个非常好用的下载工具----aria2"
@@ -186,6 +189,10 @@ while true; do
             ;;
         "26")
             gost
+            break
+            ;;
+        "27")
+            hy2
             break
             ;;
         "31")
