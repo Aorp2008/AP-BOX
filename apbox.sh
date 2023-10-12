@@ -132,7 +132,7 @@ while true; do
             break
             ;;
         "12")
-            bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)
+            wget -N --no-check-certificate https://raw.githubusercontent.com/misaka-gh/x-ui/main/install.sh && bash install.sh
             break
             ;;
         "13")
