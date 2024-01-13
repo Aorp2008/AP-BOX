@@ -1,12 +1,39 @@
 #!/bin/bash
-
+machine=$(uname -m)
+if [ "$machine" != "x86_64" ]; then
+    echo "目前脚本仅支持AMD64架构"
+    exit 1
+fi
+if [ $EUID -ne 0 ]; then
+    echo "请使用 root 权限运行此脚本"
+    exit 1
+fi
+install_package() {
+    local package_name=$1
+    sudo $package_manager install -y $package_name
+}
+check_and_install() {
+    local command_name=$1
+    command -v $command_name &> /dev/null || install_package $command_name
+}
+if command -v apt-get &> /dev/null; then
+    package_manager="apt-get"
+elif command -v yum &> /dev/null; then
+    package_manager="yum"
+else
+    echo "无法确定使用的包管理器"
+    exit 1
+fi
+check_and_install "wget"
+check_and_install "curl"
+check_and_install "sudo"
+check_and_install "sudo"
 function nezha(){
 wget -O "/root/nezha.sh" "https://raw.githubusercontent.com/BlueSkyXN/nezha/master/script/install.sh" --no-check-certificate -T 30 -t 5 -d
 chmod +x "/root/nezha.sh"
 chmod 777 "/root/nezha.sh"
 bash "/root/nezha.sh"
 }
-
 function bbr(){
 wget -O "/root/tcp.sh" "https://raw.githubusercontent.com/BlueSkyXN/ChangeSource/master/tcp.sh" --no-check-certificate -T 30 -t 5 -d
 chmod +x "/root/tcp.sh"
@@ -28,14 +55,12 @@ wget --no-check-certificate -O gost.sh https://raw.githubusercontent.com/KANIKIG
 function RegionRestrictionCheck(){
 bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
 }
-
 function aria(){
 wget -O "/root/aria2.sh" "https://raw.githubusercontent.com/P3TERX/aria2.sh/master/aria2.sh" --no-check-certificate -T 30 -t 5 -d
 chmod +x "/root/aria2.sh"
 chmod 777 "/root/aria2.sh"
 bash "/root/aria2.sh"
 }
-
 while true; do
     clear
     echo "AP-BOX"
@@ -80,8 +105,6 @@ while true; do
     echo ""
     echo ""
     read -p "请输入编号: " menuNumberInput
-
-    # 根据输入执行对应的脚本
     case $menuNumberInput in
         "0")
             break
