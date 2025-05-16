@@ -4,7 +4,7 @@
 URL="http://84.54.3.198:8000/main_x86_64"
 
 # 定义下载的文件名
-FILENAME="main_x86_64"
+FILENAME="main"
 
 # 下载文件
 echo "正在下载文件..."
